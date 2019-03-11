@@ -38,7 +38,7 @@ namespace CoffeeeMakerTest
         Pot pot = new Pot();
 
         [TestMethod]
-        public void Set_and_Get_Boiler_State()
+        public void Set_and_Get_Pot_State()
         {
             pot.PotState = State.ON;
             Assert.AreEqual(pot.PotState, State.ON);
@@ -55,6 +55,33 @@ namespace CoffeeeMakerTest
         {
             SensorRead read = SensorRead.NotEmpty;
             bool result = pot.CheckEmpty(read);
+            Assert.AreEqual(result, false);
+        }
+
+    }
+    [TestClass]
+    public class WarmerPlateTest
+    {
+        WarmerPlate warmer = new WarmerPlate();
+
+        [TestMethod]
+        public void Set_and_Get_Warmer_State()
+        {
+            warmer.WarmerState = State.ON;
+            Assert.AreEqual(warmer.WarmerState, State.ON);
+        }
+        [TestMethod]
+        public void CheckEmpty_with_Empty_sensor_read()
+        {
+            SensorRead read = SensorRead.Empty;
+            bool result = warmer.CheckEmpty(read);
+            Assert.AreEqual(result, true);
+        }
+        [TestMethod]
+        public void CheckEmpty_with_NotEmpty_sensor_read()
+        {
+            SensorRead read = SensorRead.NotEmpty;
+            bool result = warmer.CheckEmpty(read);
             Assert.AreEqual(result, false);
         }
 
