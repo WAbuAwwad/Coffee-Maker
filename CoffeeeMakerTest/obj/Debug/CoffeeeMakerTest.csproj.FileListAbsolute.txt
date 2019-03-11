@@ -1,0 +1,17 @@
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\CoffeeeMakerTest.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\CoffeeeMakerTest.pdb
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\obj\Debug\CoffeeeMakerTest.csprojAssemblyReference.cache
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\obj\Debug\CoffeeeMakerTest.csproj.CoreCompileInputs.cache
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\obj\Debug\CoffeeeMakerTest.csproj.CopyComplete
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\obj\Debug\CoffeeeMakerTest.dll
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\obj\Debug\CoffeeeMakerTest.pdb
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\CoffeeMaker.exe
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\CoffeeMaker.pdb
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeeMakerTest\bin\Debug\CoffeeMaker.exe.config
