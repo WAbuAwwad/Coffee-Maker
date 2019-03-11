@@ -53,6 +53,7 @@ namespace CoffeeeMakerTest
             maker.makeCoffee(wRead, bRead, pRead, Button);
             Assert.AreEqual(maker.valve, State.ON);
             Assert.AreEqual(maker.boiler.State, State.ON);
+          
         }
         [TestMethod]
         public void Brew_Coffee_Done()
@@ -65,8 +66,34 @@ namespace CoffeeeMakerTest
             maker.makeCoffee(wRead, bRead, pRead, Button);
             Assert.AreEqual(maker.indicator, State.ON);
             Assert.AreEqual(maker.boiler.State, State.OFF);
+            Assert.AreEqual(maker.warmer.State, State.ON);
         }
+        [TestMethod]
+        public void Pour_Coffee_RemovePot()
+        {
+            Maker maker = new Maker(warmer, boiler, pot);
+            SensorRead wRead = SensorRead.Empty;
+            SensorRead bRead = SensorRead.Empty;
+            SensorRead pRead = SensorRead.NotEmpty;
+            State Button = State.ON;
+            maker.makeCoffee(wRead, bRead, pRead, Button);
+            Assert.AreEqual(maker.warmer.State, State.OFF);
+            Assert.AreEqual(maker.indicator, State.OFF);
+        
+        }
+        [TestMethod]
+        public void Pour_Coffee_ReturnPot()
+        {
+            Maker maker = new Maker(warmer, boiler, pot);
+            SensorRead wRead = SensorRead.NotEmpty;
+            SensorRead bRead = SensorRead.Empty;
+            SensorRead pRead = SensorRead.NotEmpty;
+            State Button = State.ON;
+            maker.makeCoffee(wRead, bRead, pRead, Button);
+            Assert.AreEqual(maker.warmer.State, State.ON);
+            Assert.AreEqual(maker.indicator, State.ON);
 
+        }
 
     }
 }

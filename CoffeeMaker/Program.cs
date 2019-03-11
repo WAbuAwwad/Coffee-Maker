@@ -32,20 +32,37 @@ namespace CoffeeMaker
         public void makeCoffee(SensorRead wRead, SensorRead bRead, SensorRead pRead,State btn)
         {
             if (!warmer.CheckEmpty(wRead))
+            {
                 if (pot.CheckEmpty(pRead))
+                {
                     if (!boiler.CheckEmpty(bRead))
                     {
                         if (btn == State.ON)
                         {
                             valve = State.ON;
                             boiler.State = State.ON;
+
                         }
                     }
                     else
+
                     {
                         boiler.State = State.OFF;
                         indicator = State.ON;
+                        warmer.State = State.ON;
                     }
+                }
+                else
+                {
+                    warmer.State = State.ON;
+                    indicator = State.ON;
+                }
+            }
+            else
+            {
+                indicator = State.OFF;
+                warmer.State = State.OFF;
+            }
         }
         static void Main()
         {
