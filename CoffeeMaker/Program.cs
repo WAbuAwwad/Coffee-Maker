@@ -60,6 +60,8 @@ namespace CoffeeMaker
             }
             else
             {
+                boiler.State = State.OFF;
+                valve = State.OFF;
                 indicator = State.OFF;
                 warmer.State = State.OFF;
             }

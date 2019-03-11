@@ -94,6 +94,19 @@ namespace CoffeeeMakerTest
             Assert.AreEqual(maker.indicator, State.ON);
 
         }
+        [TestMethod]
+        public void Interrupt_Brewing()
+        {
+            Maker maker = new Maker(warmer, boiler, pot);
+            SensorRead wRead = SensorRead.Empty;
+            SensorRead bRead = SensorRead.NotEmpty;
+            SensorRead pRead = SensorRead.NotEmpty;
+            State Button = State.ON;
+            maker.makeCoffee(wRead, bRead, pRead, Button);
+            Assert.AreEqual(maker.valve, State.OFF);
+            Assert.AreEqual(maker.boiler.State, State.OFF);
+
+        }
 
     }
 }
