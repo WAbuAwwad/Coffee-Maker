@@ -16,15 +16,13 @@ namespace CoffeeMaker
         Empty,
         NotEmpty
     }
-  class CoffeeMaker
+  public class Maker
     {
-        private MakerElement warmer, boiler,pot;
-        private State indicator = State.OFF;
-        private State valve = State.OFF;
+        public MakerElement warmer, boiler,pot;
+        public State indicator = State.OFF;
+        public State valve = State.OFF;
 
-
-
-        public CoffeeMaker(MakerElement warmer, MakerElement boiler, MakerElement pot)
+        public Maker(MakerElement warmer, MakerElement boiler, MakerElement pot)
         {
           this.warmer = warmer;
            this.boiler = boiler;
@@ -33,8 +31,21 @@ namespace CoffeeMaker
 
         public void makeCoffee(SensorRead wRead, SensorRead bRead, SensorRead pRead,State btn)
         {
-
-
+            if (!warmer.CheckEmpty(wRead))
+                if (pot.CheckEmpty(pRead))
+                    if (!boiler.CheckEmpty(bRead))
+                    {
+                        if (btn == State.ON)
+                        {
+                            valve = State.ON;
+                            boiler.State = State.ON;
+                        }
+                    }
+                    else
+                    {
+                        boiler.State = State.OFF;
+                        indicator = State.ON;
+                    }
         }
         static void Main()
         {

@@ -1,7 +1,6 @@
-C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.csprojAssemblyReference.cache
-C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.csproj.CoreCompileInputs.cache
 C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\bin\Debug\CoffeeMaker.exe.config
 C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\bin\Debug\CoffeeMaker.exe
 C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\bin\Debug\CoffeeMaker.pdb
+C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.csproj.CoreCompileInputs.cache
 C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.exe
 C:\Users\ThinkPad E580\source\repos\CoffeeMaker\CoffeeMaker\obj\Debug\CoffeeMaker.pdb

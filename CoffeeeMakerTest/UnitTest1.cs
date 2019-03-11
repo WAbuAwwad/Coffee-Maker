@@ -32,5 +32,42 @@ namespace CoffeeeMakerTest
         }
 
     }
+
+
+    [TestClass]
+    public class coffeeMakingTest
+    {
+
+        MakerElement warmer = new MakerElement();
+        MakerElement boiler = new MakerElement();
+        MakerElement pot = new MakerElement();
+      
+        [TestMethod]
+        public void Brew_Coffee()
+        {
+            Maker maker = new Maker(warmer, boiler, pot);
+            SensorRead wRead = SensorRead.NotEmpty;
+            SensorRead bRead = SensorRead.NotEmpty;
+            SensorRead pRead = SensorRead.Empty;
+            State Button = State.ON;
+            maker.makeCoffee(wRead, bRead, pRead, Button);
+            Assert.AreEqual(maker.valve, State.ON);
+            Assert.AreEqual(maker.boiler.State, State.ON);
+        }
+        [TestMethod]
+        public void Brew_Coffee_Done()
+        {
+            Maker maker = new Maker(warmer, boiler, pot);
+            SensorRead wRead = SensorRead.NotEmpty;
+            SensorRead bRead = SensorRead.Empty;
+            SensorRead pRead = SensorRead.Empty;
+            State Button = State.ON;
+            maker.makeCoffee(wRead, bRead, pRead, Button);
+            Assert.AreEqual(maker.indicator, State.ON);
+            Assert.AreEqual(maker.boiler.State, State.OFF);
+        }
+
+
+    }
 }
 
