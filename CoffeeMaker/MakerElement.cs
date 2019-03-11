@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace CoffeeMaker
 {
-   public class WarmerPlate
-    {    
-        private State warmerState;
-        public State WarmerState
-        {
-            get { return warmerState; }
-            set { warmerState = value; }
-        }
+  public  class MakerElement
+    {
+     
+        public State State { get; set; }
 
         public bool CheckEmpty(SensorRead read)
         {
@@ -24,4 +20,5 @@ namespace CoffeeMaker
             else return false;
         }
     }
+
 }

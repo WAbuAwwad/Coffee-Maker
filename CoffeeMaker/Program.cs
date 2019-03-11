@@ -10,15 +10,32 @@ namespace CoffeeMaker
     {
         ON,
         OFF
-
     }
   public enum SensorRead
     {
         Empty,
         NotEmpty
     }
-  class CoffeMaker
+  class CoffeeMaker
     {
+        private MakerElement warmer, boiler,pot;
+        private State indicator = State.OFF;
+        private State valve = State.OFF;
+
+
+
+        public CoffeeMaker(MakerElement warmer, MakerElement boiler, MakerElement pot)
+        {
+          this.warmer = warmer;
+           this.boiler = boiler;
+            this.pot = pot;
+        }
+
+        public void makeCoffee(SensorRead wRead, SensorRead bRead, SensorRead pRead,State btn)
+        {
+
+
+        }
         static void Main()
         {
             

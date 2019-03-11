@@ -6,82 +6,28 @@ using CoffeeMaker;
 namespace CoffeeeMakerTest
 {
     [TestClass]
-    public class BoilerTest
+    public class MakerElementTest
     {
-        Boiler boiler = new Boiler();
+        MakerElement element = new MakerElement();
 
         [TestMethod]
-        public void Set_and_Get_Boiler_State()
+        public void Set_and_Get_Element_State()
         {
-            boiler.BoilerState = State.ON;
-            Assert.AreEqual(boiler.BoilerState, State.ON);
+            element.State = State.ON;
+            Assert.AreEqual(element.State, State.ON);
         }
         [TestMethod]
         public void CheckEmpty_with_Empty_sensor_read()
         {
             SensorRead read = SensorRead.Empty;
-            bool result=  boiler.CheckEmpty(read);
-            Assert.AreEqual(result,true);
-        }
-        [TestMethod]
-        public void CheckEmpty_with_NotEmpty_sensor_read()
-        {
-            SensorRead read = SensorRead.NotEmpty;
-            bool result = boiler.CheckEmpty(read);
-            Assert.AreEqual(result, false);
-        }
-
-    }
-    [TestClass]
-    public class PotTest
-    {
-        Pot pot = new Pot();
-
-        [TestMethod]
-        public void Set_and_Get_Pot_State()
-        {
-            pot.PotState = State.ON;
-            Assert.AreEqual(pot.PotState, State.ON);
-        }
-        [TestMethod]
-        public void CheckEmpty_with_Empty_sensor_read()
-        {
-            SensorRead read = SensorRead.Empty;
-            bool result = pot.CheckEmpty(read);
+            bool result = element.CheckEmpty(read);
             Assert.AreEqual(result, true);
         }
         [TestMethod]
         public void CheckEmpty_with_NotEmpty_sensor_read()
         {
             SensorRead read = SensorRead.NotEmpty;
-            bool result = pot.CheckEmpty(read);
-            Assert.AreEqual(result, false);
-        }
-
-    }
-    [TestClass]
-    public class WarmerPlateTest
-    {
-        WarmerPlate warmer = new WarmerPlate();
-
-        [TestMethod]
-        public void Set_and_Get_Warmer_State()
-        {
-            warmer.WarmerState = State.ON;
-            Assert.AreEqual(warmer.WarmerState, State.ON);
-        }
-        [TestMethod]
-        public void CheckEmpty_with_Empty_sensor_read()
-        {
-            SensorRead read = SensorRead.Empty;
-            bool result = warmer.CheckEmpty(read);
-            Assert.AreEqual(result, true);
-        }
-        [TestMethod]
-        public void CheckEmpty_with_NotEmpty_sensor_read()
-        {
-            SensorRead read = SensorRead.NotEmpty;
-            bool result = warmer.CheckEmpty(read);
+            bool result = element.CheckEmpty(read);
             Assert.AreEqual(result, false);
         }
 
